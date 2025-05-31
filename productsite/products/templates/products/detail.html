@@ -1,0 +1,60 @@
+<!-- products/templates/products/detail.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ product.name }} - Details</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f2f5;
+      margin: 0; padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      border-radius: 12px;
+      padding: 30px 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      color: #2c3e50;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    .price {
+      font-size: 1.5em;
+      color: #27ae60;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .description {
+      font-size: 1.1em;
+      line-height: 1.5;
+      white-space: pre-wrap;
+    }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #2980b9;
+      font-weight: 600;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>{{ product.name }}</h1>
+    <div class="price">₹ {{ product.price }}</div>
+    <div class="description">{{ product.description }}</div>
+    <a class="back-link" href="{% url 'product_list' %}">← Back to all products</a>
+  </div>
+</body>
+</html>

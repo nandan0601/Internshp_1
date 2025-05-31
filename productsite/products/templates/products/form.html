@@ -1,0 +1,9 @@
+<h2>Add Product</h2>
+<form method="post">
+    {% csrf_token %}
+    <label>Name:</label><input type="text" name="name"><br>
+    <label>Description:</label><textarea name="description"></textarea><br>
+    <label>Price:</label><input type="number" name="price" step="0.01"><br>
+    <button type="submit">Submit</button>
+</form>
+<a href="{% url 'product_list' %}">View All Products</a>
